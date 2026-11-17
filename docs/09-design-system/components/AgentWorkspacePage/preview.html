@@ -1,0 +1,47 @@
+<!-- @dsCard group="Pages" height=640 width=1210 subtitle="Navigasi, daftar tiket, detail dan percakapan" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-app tsd-app--workspace">
+  <nav class="tsd-nav" aria-label="Navigasi utama">
+    <div class="tsd-nav__group">Workspace</div>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8M5 10v10h14V10"/></svg>Overview</a>
+    <a class="tsd-nav__item" href="#" aria-current="page"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h5l1 3h6l1-3h5M5 5h14l2 8v6H3v-6z"/></svg>Unified Inbox<span class="tsd-nav__count">27</span></a>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>My Tickets<span class="tsd-nav__count">9</span></a>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Pending Approval<span class="tsd-nav__count tsd-nav__count--approval">3</span></a>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>SLA at Risk<span class="tsd-nav__count tsd-nav__count--sla">5</span></a>
+    <div class="tsd-nav__group">Treasury</div>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg>Bank Accounts</a>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg>Bank Statements</a>
+    <a class="tsd-nav__item" href="#"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Treasury Dashboard</a>
+  </nav>
+
+  <section class="tsd-panel" aria-label="Daftar tiket">
+    <div class="tsd-panel__head">Unified Inbox <span class="tsd-meta tsd-num">27 tiket</span></div>
+    <div class="tsd-ticket tsd-ticket--unread tsd-ticket--selected"><div class="tsd-ticket__subject">Selisih saldo rekening operasional</div><span class="tsd-ref">TKT-0001</span><div class="tsd-ticket__meta"><span class="tsd-badge tsd-badge--open"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>In Progress</span><span class="tsd-badge tsd-badge--urgent"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 18h.01"/></svg>Urgent</span><span class="tsd-sla tsd-sla--warning tsd-num"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>42 m</span></div></div>
+    <div class="tsd-ticket tsd-ticket--unread"><div class="tsd-ticket__subject">Permintaan pembukaan rekening baru</div><span class="tsd-ref">TKT-0002</span><div class="tsd-ticket__meta"><span class="tsd-badge tsd-badge--open"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>Open</span><span class="tsd-sla tsd-sla--ok tsd-num"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>SLA 3 j 20 m</span></div></div>
+    <div class="tsd-ticket"><div class="tsd-ticket__subject">Statement November belum tersedia</div><span class="tsd-ref">TKT-0003</span><div class="tsd-ticket__meta"><span class="tsd-badge tsd-badge--pending"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>Pending · Waiting for Bank</span><span class="tsd-sla tsd-sla--paused">SLA dijeda</span></div></div>
+    <div class="tsd-ticket"><div class="tsd-ticket__subject">Konfirmasi pembayaran vendor</div><span class="tsd-ref">TKT-0004</span><div class="tsd-ticket__meta"><span class="tsd-badge tsd-badge--resolved"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Resolved</span></div></div>
+  </section>
+
+  <section class="tsd-panel" aria-label="Detail tiket">
+    <div class="tsd-panel__head" style="flex-wrap:wrap">
+      <span style="flex:1;min-width:200px">Selisih saldo rekening operasional</span>
+      <button class="tsd-btn tsd-btn--secondary tsd-btn--sm">Assign</button><button class="tsd-btn tsd-btn--primary tsd-btn--sm">Resolve</button>
+    </div>
+    <dl class="tsd-meta-grid">
+      <dt>Ticket</dt><dd class="tsd-ref">TKT-0001</dd>
+      <dt>Status</dt><dd><span class="tsd-badge tsd-badge--open">In Progress</span> <span class="tsd-badge tsd-badge--urgent">Urgent</span></dd>
+      <dt>Assignee</dt><dd><span class="tsd-row" style="gap:var(--space-2)"><span class="tsd-avatar tsd-avatar--sm" aria-hidden="true">TA</span>Treasury Agent</span></dd>
+      <dt>Rekening</dt><dd class="tsd-ref">Perusahaan A · Bank 1 · •••• 4417</dd>
+    </dl>
+    <div class="tsd-tabs" role="tablist" style="padding:0 var(--space-2)">
+      <button class="tsd-tab" role="tab" aria-selected="true">Percakapan<span class="tsd-tab__count">3</span></button>
+      <button class="tsd-tab" role="tab" aria-selected="false">Riwayat</button>
+      <button class="tsd-tab" role="tab" aria-selected="false">Terkait</button>
+    </div>
+    <div class="tsd-thread" style="padding:var(--space-4)">
+      <div class="tsd-msg"><span class="tsd-avatar" aria-hidden="true">RQ</span><div class="tsd-msg__body"><div class="tsd-msg__head">Requester<span class="tsd-msg__time">09:12</span></div><div class="tsd-msg__text">Saldo di sistem berbeda IDR 1.000.000,00 dari mutasi bank. Mohon dicek.</div></div></div>
+      <div class="tsd-msg tsd-msg--note"><span class="tsd-avatar" aria-hidden="true">TA</span><div class="tsd-msg__body"><div class="tsd-msg__head">Treasury Agent <span class="tsd-note-tag"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>Catatan internal</span><span class="tsd-msg__time">09:34</span></div><div class="tsd-msg__text">Cek statement 16 Nov, kemungkinan biaya administrasi belum masuk.</div></div></div>
+      <div class="tsd-composer"><textarea aria-label="Isi balasan" placeholder="Tulis balasan untuk requester"></textarea><div class="tsd-composer__bar"><span style="flex:1"></span><button class="tsd-btn tsd-btn--primary tsd-btn--sm">Kirim Balasan</button></div></div>
+    </div>
+  </section>
+</div>
