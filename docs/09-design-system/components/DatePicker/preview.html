@@ -1,0 +1,19 @@
+<!-- @dsCard group="Forms" height=420 width=700 subtitle="Input tanggal dengan kalender, rentang dan tanggal nonaktif" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-row" style="align-items:flex-start;gap:var(--space-8)">
+  <div class="tsd-col" style="gap:var(--space-2)">
+    <div class="tsd-field" style="width:288px"><label for="dt">Periode statement</label><input id="dt" class="tsd-input" value="12/11/2026 – 17/11/2026" aria-describedby="dth" /><span id="dth" class="tsd-help">Format DD/MM/YYYY. Tanggal setelah hari ini tidak dapat dipilih.</span></div>
+    <div class="tsd-field" style="width:288px"><label for="dt2">Tanggal statement</label><input id="dt2" class="tsd-input" value="31/13/2026" aria-invalid="true" aria-describedby="dte" /><span id="dte" class="tsd-error">Tanggal tidak valid. Gunakan format DD/MM/YYYY.</span></div>
+  </div>
+  <div class="tsd-cal" role="dialog" aria-label="Pilih tanggal">
+    <div class="tsd-cal__head"><button class="tsd-cal__nav" aria-label="Bulan sebelumnya"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><span>November 2026</span><button class="tsd-cal__nav" aria-label="Bulan berikutnya"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+    <div class="tsd-cal__grid" role="grid">
+      <span class="tsd-cal__dow">Sen</span><span class="tsd-cal__dow">Sel</span><span class="tsd-cal__dow">Rab</span><span class="tsd-cal__dow">Kam</span><span class="tsd-cal__dow">Jum</span><span class="tsd-cal__dow">Sab</span><span class="tsd-cal__dow">Min</span>
+      <button class="tsd-cal__day tsd-cal__day--out">26</button><button class="tsd-cal__day tsd-cal__day--out">27</button><button class="tsd-cal__day tsd-cal__day--out">28</button><button class="tsd-cal__day tsd-cal__day--out">29</button><button class="tsd-cal__day tsd-cal__day--out">30</button><button class="tsd-cal__day tsd-cal__day--out">31</button><button class="tsd-cal__day">1</button>
+      <button class="tsd-cal__day">2</button><button class="tsd-cal__day">3</button><button class="tsd-cal__day">4</button><button class="tsd-cal__day">5</button><button class="tsd-cal__day">6</button><button class="tsd-cal__day">7</button><button class="tsd-cal__day">8</button>
+      <button class="tsd-cal__day">9</button><button class="tsd-cal__day">10</button><button class="tsd-cal__day">11</button><button class="tsd-cal__day tsd-cal__day--edge" aria-pressed="true">12</button><button class="tsd-cal__day tsd-cal__day--range">13</button><button class="tsd-cal__day tsd-cal__day--range">14</button><button class="tsd-cal__day tsd-cal__day--range">15</button>
+      <button class="tsd-cal__day tsd-cal__day--range">16</button><button class="tsd-cal__day tsd-cal__day--edge tsd-cal__day--today" aria-pressed="true" aria-current="date">17</button><button class="tsd-cal__day" disabled>18</button><button class="tsd-cal__day" disabled>19</button><button class="tsd-cal__day" disabled>20</button><button class="tsd-cal__day" disabled>21</button><button class="tsd-cal__day" disabled>22</button>
+    </div>
+    <div class="tsd-cal__foot"><button class="tsd-btn tsd-btn--ghost tsd-btn--sm">Hari ini</button><button class="tsd-btn tsd-btn--primary tsd-btn--sm">Terapkan</button></div>
+  </div>
+</div>

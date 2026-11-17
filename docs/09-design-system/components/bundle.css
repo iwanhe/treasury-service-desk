@@ -267,3 +267,25 @@ body { margin: 0; padding: var(--space-4); background: var(--bg); color: var(--t
 .tsd-audit-detail dl { display: grid; grid-template-columns: 140px 1fr 1fr; gap: var(--space-1) var(--space-4); margin: 0; font: 400 12px/16px var(--font-sans); }
 .tsd-audit-detail dt { color: var(--text-muted); }
 .tsd-audit-detail dd { margin: 0; font-family: var(--font-mono); }
+
+/* Tooltip generik */
+.tsd-tooltip-wrap { position: relative; display: inline-flex; }
+.tsd-tooltip { position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%); z-index: 3; width: max-content; max-width: 240px; padding: var(--space-1) var(--space-2); background: var(--text); color: var(--surface); border-radius: var(--radius-sm); font: 400 12px/16px var(--font-sans); opacity: 0; pointer-events: none; transition: opacity 120ms; }
+.tsd-tooltip-wrap:hover .tsd-tooltip, .tsd-tooltip-wrap:focus-within .tsd-tooltip, .tsd-tooltip.on { opacity: 1; }
+
+/* Date picker */
+.tsd-cal { width: 288px; padding: var(--space-3); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--elevation-2); }
+.tsd-cal__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-2); font: 600 14px/20px var(--font-sans); }
+.tsd-cal__nav { width: 32px; height: 32px; display: inline-grid; place-items: center; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--text); cursor: pointer; }
+.tsd-cal__nav:hover { background: var(--surface-subtle); }
+.tsd-cal__nav:focus-visible, .tsd-cal__day:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 1px; }
+.tsd-cal__grid { display: grid; grid-template-columns: repeat(7, 36px); gap: 2px; justify-content: center; }
+.tsd-cal__dow { height: 28px; display: grid; place-items: center; font: 500 12px/16px var(--font-sans); color: var(--text-muted); }
+.tsd-cal__day { width: 36px; height: 36px; border: 1px solid transparent; border-radius: var(--radius-sm); background: transparent; color: var(--text); font: 400 13px/18px var(--font-sans); font-variant-numeric: tabular-nums; cursor: pointer; }
+.tsd-cal__day:hover { background: var(--surface-subtle); }
+.tsd-cal__day--out { color: var(--text-muted); }
+.tsd-cal__day--today { border-color: var(--border-strong); font-weight: 600; }
+.tsd-cal__day--range { background: var(--primary-subtle); color: var(--primary-text); border-radius: 0; }
+.tsd-cal__day--edge { background: var(--primary); color: var(--text-on-solid); font-weight: 600; border-radius: var(--radius-sm); }
+.tsd-cal__day[disabled] { color: var(--text-muted); text-decoration: line-through; cursor: not-allowed; background: transparent; }
+.tsd-cal__foot { display: flex; justify-content: space-between; align-items: center; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border); }
