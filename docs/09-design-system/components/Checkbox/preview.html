@@ -1,0 +1,15 @@
+<!-- @dsCard group="Forms" height=130 subtitle="Checkbox, indeterminate, radio, nonaktif" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-row" style="gap:var(--space-8);align-items:flex-start">
+  <div class="tsd-col" style="gap:var(--space-2)">
+    <label class="tsd-check-input"><input type="checkbox"><span>Belum dipilih</span></label>
+    <label class="tsd-check-input"><input type="checkbox" checked><span>Dipilih</span></label>
+    <label class="tsd-check-input"><input type="checkbox" id="ind"><span>Sebagian dipilih</span></label>
+  </div>
+  <div class="tsd-col" style="gap:var(--space-2)">
+    <label class="tsd-check-input"><input type="radio" name="m" checked><span>Controlled mode</span></label>
+    <label class="tsd-check-input"><input type="radio" name="m"><span>Automatic mode</span></label>
+    <label class="tsd-check-input"><input type="checkbox" disabled><span>Nonaktif</span></label>
+  </div>
+</div>
+<script>document.getElementById('ind').indeterminate = true;</script>

@@ -1,0 +1,22 @@
+<!-- @dsCard group="Pages" height=560 width=980 subtitle="Filter, tabel kejadian, detail sebelum dan sesudah" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col tsd-app--stack" style="gap:var(--space-4)">
+  <div class="tsd-row" style="justify-content:space-between"><h1 class="tsd-dialog__title" style="font-size:22px;line-height:30px">Audit Trail</h1><button class="tsd-btn tsd-btn--secondary tsd-btn--sm">Export</button></div>
+  <div class="tsd-banner" style="background:var(--surface-subtle)"><svg class="tsd-ico tsd-banner__icon" style="color:var(--text-muted)" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><div class="tsd-banner__body" style="margin:0;color:var(--text)">Log audit hanya baca. Tidak ada aksi ubah atau hapus dari aplikasi.</div></div>
+  <div class="tsd-filters">
+    <div class="tsd-seg" role="group" aria-label="Rentang tanggal"><button aria-pressed="false">Hari ini</button><button aria-pressed="true">7 hari</button><button aria-pressed="false">30 hari</button><button aria-pressed="false">Kustom</button></div>
+    <select class="tsd-select" aria-label="Pelaku"><option>Semua pelaku</option></select>
+    <select class="tsd-select" aria-label="Aksi"><option>Semua aksi</option></select>
+    <select class="tsd-select" aria-label="Entitas"><option>Semua entitas</option></select>
+  </div>
+  <div class="tsd-card" style="padding:0;overflow:hidden"><table class="tsd-table">
+    <thead><tr><th scope="col">Waktu</th><th scope="col">Pelaku</th><th scope="col">Aksi</th><th scope="col">Entitas</th><th scope="col">ID</th></tr></thead>
+    <tbody>
+      <tr><td class="tsd-num">17 Nov 2026, 10:02</td><td>Checker</td><td><span class="tsd-badge tsd-badge--posted">Post</span></td><td>Statement</td><td class="tsd-ref">STM-…c21e</td></tr>
+      <tr><td colspan="5" style="padding:0"><div class="tsd-audit-detail"><dl><dt>Field</dt><dt>Sebelum</dt><dt>Sesudah</dt><dt>status</dt><dd>Approved</dd><dd>Posted</dd><dt>posted_at</dt><dd>—</dd><dd>2026-11-17T03:02:11Z</dd></dl></div></td></tr>
+      <tr><td class="tsd-num">17 Nov 2026, 09:58</td><td>Checker</td><td><span class="tsd-badge tsd-badge--approval">Approve</span></td><td>Statement</td><td class="tsd-ref">STM-…c21e</td></tr>
+      <tr><td class="tsd-num">17 Nov 2026, 09:10</td><td>Maker</td><td><span class="tsd-badge tsd-badge--open">Submit</span></td><td>Statement</td><td class="tsd-ref">STM-…c21e</td></tr>
+      <tr><td class="tsd-num">17 Nov 2026, 08:40</td><td>Administrator</td><td><span class="tsd-badge tsd-badge--pending">Ubah role</span></td><td>User</td><td class="tsd-ref">USR-…7a10</td></tr>
+    </tbody></table></div>
+  <div class="tsd-pager"><span class="tsd-num">Menampilkan 1–4 dari 128 kejadian</span></div>
+</div>

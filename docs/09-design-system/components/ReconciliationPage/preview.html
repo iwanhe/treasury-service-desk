@@ -1,0 +1,26 @@
+<!-- @dsCard group="Pages" height=640 width=980 subtitle="Bank reported, calculated, selisih, item" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col tsd-app--stack" style="gap:var(--space-4)">
+  <div class="tsd-row" style="justify-content:space-between"><div><h1 class="tsd-dialog__title" style="font-size:22px;line-height:30px">Reconciliation</h1><div class="tsd-meta">Perusahaan A · Bank 1 · •••• 4417 · IDR · statement 1–17 Nov 2026</div></div><span class="tsd-badge tsd-badge--failed"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Belum cocok</span></div>
+
+  <div class="tsd-diff">
+    <div class="tsd-diff__cell"><span class="tsd-label">Bank reported</span><span class="tsd-amt tsd-amt--xl" style="font-variant-numeric:normal">IDR 509.975.000,00</span><span class="tsd-meta">Closing di statement</span></div>
+    <div class="tsd-diff__cell"><span class="tsd-label">Calculated</span><span class="tsd-amt tsd-amt--xl" style="font-variant-numeric:normal">IDR 510.000.000,00</span><span class="tsd-meta">Opening + Credit − Debit dari transaksi diimpor</span></div>
+    <div class="tsd-diff__cell tsd-diff__cell--bad" role="alert"><span class="tsd-label" style="color:var(--danger-text)">Selisih</span><span class="tsd-amt tsd-amt--xl" style="font-variant-numeric:normal;color:var(--danger-text)">IDR 25.000,00</span><span class="tsd-meta" style="color:var(--text)">1 item Unmatched</span></div>
+  </div>
+
+  <div class="tsd-card">
+    <div style="font:600 15px/22px var(--font-sans);margin-bottom:var(--space-2)">Pemeriksaan</div>
+    <div class="tsd-check"><svg class="tsd-ico tsd-check__ico--ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div>Opening sama dengan closing statement sebelumnya</div></div>
+    <div class="tsd-check"><svg class="tsd-ico tsd-check__ico--ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div>Tidak ada transaksi duplikat</div></div>
+    <div class="tsd-check"><svg class="tsd-ico tsd-check__ico--err" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><div><span style="font-weight:500">Total debit tidak cocok</span><div class="tsd-meta">Satu transaksi tidak ikut terhitung di hasil kalkulasi</div></div></div>
+  </div>
+
+  <div class="tsd-card" style="padding:0;overflow:hidden"><table class="tsd-table tsd-num">
+    <thead><tr><th scope="col">Tanggal</th><th scope="col">Deskripsi</th><th scope="col">Reference</th><th scope="col" class="r">Debit</th><th scope="col" class="r">Credit</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+      <tr><td>17 Nov 2026</td><td>PAYMENT VENDOR ABC</td><td class="tsd-ref">TRX123456</td><td class="r" style="color:var(--fin-debit)">15.000.000,00</td><td class="r">—</td><td><span class="tsd-badge tsd-badge--reconciled"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12l5 5L18 6M14 17l1 1L22 9"/></svg>Matched</span></td></tr>
+      <tr><td>17 Nov 2026</td><td>BIAYA ADMINISTRASI</td><td class="tsd-ref">TRX123458</td><td class="r" style="color:var(--fin-debit)">25.000,00</td><td class="r">—</td><td><span class="tsd-badge tsd-badge--failed"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Unmatched · tidak ada di hasil kalkulasi</span></td></tr>
+    </tbody></table></div>
+  <div class="tsd-row" style="justify-content:flex-end"><span class="tsd-meta">Tandai Reconciled aktif bila selisih nol dan tidak ada item Unmatched.</span><button class="tsd-btn tsd-btn--primary" disabled>Tandai Reconciled</button></div>
+</div>

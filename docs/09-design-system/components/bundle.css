@@ -244,3 +244,26 @@ body { margin: 0; padding: var(--space-4); background: var(--bg); color: var(--t
 .tsd-steps { display: flex; gap: var(--space-2); align-items: center; font: 500 13px/18px var(--font-sans); color: var(--text-muted); }
 .tsd-steps b { color: var(--text); font-weight: 600; }
 .tsd-two { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: var(--space-4); align-items: start; }
+
+/* Checkbox and radio */
+.tsd-check-input { display: inline-flex; align-items: center; gap: var(--space-2); font: 400 14px/20px var(--font-sans); color: var(--text); cursor: pointer; }
+.tsd-check-input input { appearance: none; margin: 0; width: 18px; height: 18px; flex: none; border: 1px solid var(--border-strong); background: var(--surface); display: inline-grid; place-content: center; cursor: pointer; }
+.tsd-check-input input[type="checkbox"] { border-radius: var(--radius-sm); }
+.tsd-check-input input[type="radio"] { border-radius: var(--radius-full); }
+.tsd-check-input input:checked, .tsd-check-input input:indeterminate { background: var(--primary); border-color: var(--primary); }
+.tsd-check-input input[type="checkbox"]:checked::after { content: ""; width: 5px; height: 9px; border: solid var(--text-on-solid); border-width: 0 2px 2px 0; transform: rotate(45deg) translate(-1px, -1px); }
+.tsd-check-input input[type="checkbox"]:indeterminate::after { content: ""; width: 9px; height: 2px; background: var(--text-on-solid); }
+.tsd-check-input input[type="radio"]:checked::after { content: ""; width: 8px; height: 8px; border-radius: var(--radius-full); background: var(--text-on-solid); }
+.tsd-check-input input:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.tsd-check-input input:disabled { background: var(--surface-subtle); border-color: var(--border); cursor: not-allowed; }
+.tsd-check-input input:disabled ~ span { color: var(--text-muted); }
+
+/* Reconciliation and audit */
+.tsd-diff { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4); }
+.tsd-diff__cell { padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); display: flex; flex-direction: column; gap: var(--space-1); }
+.tsd-diff__cell--bad { background: var(--danger-subtle); border-color: var(--danger-text); }
+.tsd-diff__cell--ok { background: var(--reconciled-bg); border-color: var(--reconciled); }
+.tsd-audit-detail { background: var(--surface-subtle); padding: var(--space-3) var(--space-4); }
+.tsd-audit-detail dl { display: grid; grid-template-columns: 140px 1fr 1fr; gap: var(--space-1) var(--space-4); margin: 0; font: 400 12px/16px var(--font-sans); }
+.tsd-audit-detail dt { color: var(--text-muted); }
+.tsd-audit-detail dd { margin: 0; font-family: var(--font-mono); }
