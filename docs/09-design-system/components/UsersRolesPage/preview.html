@@ -1,0 +1,21 @@
+<!-- @dsCard group="Pages" height=560 width=980 subtitle="Pengguna, role, akses company, peringatan pemisahan tugas" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col tsd-app--stack" style="gap:var(--space-4)">
+  <div class="tsd-row" style="justify-content:space-between"><h1 class="tsd-dialog__title" style="font-size:22px;line-height:30px">Users &amp; Roles</h1><button class="tsd-btn tsd-btn--primary tsd-btn--sm">Tambah Pengguna</button></div>
+  <div class="tsd-filters"><input class="tsd-input" style="width:240px" aria-label="Cari pengguna" placeholder="Cari nama atau email" /><select class="tsd-select" aria-label="Role"><option>Semua role</option></select><select class="tsd-select" aria-label="Company"><option>Semua company</option></select><select class="tsd-select" aria-label="Status"><option>Aktif</option></select></div>
+  <div class="tsd-two" style="grid-template-columns:minmax(0,1fr) 300px">
+    <div class="tsd-card" style="padding:0;overflow:hidden"><table class="tsd-table">
+      <thead><tr><th scope="col" style="width:32px"><label class="tsd-check-input"><input type="checkbox" aria-label="Pilih semua"></label></th><th scope="col">Pengguna</th><th scope="col">Role</th><th scope="col">Company</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr><td><label class="tsd-check-input"><input type="checkbox" aria-label="Pilih Maker"></label></td><td><div class="tsd-row" style="gap:var(--space-2)"><span class="tsd-avatar tsd-avatar--sm" aria-hidden="true">MK</span>Maker Contoh</div></td><td><span class="tsd-badge tsd-badge--open">Maker</span></td><td>Perusahaan A</td><td><span class="tsd-badge tsd-badge--posted"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Aktif</span></td></tr>
+        <tr><td><label class="tsd-check-input"><input type="checkbox" checked aria-label="Pilih Checker"></label></td><td><div class="tsd-row" style="gap:var(--space-2)"><span class="tsd-avatar tsd-avatar--sm" aria-hidden="true">CK</span>Checker Contoh</div></td><td><span class="tsd-badge tsd-badge--approval">Checker</span> <span class="tsd-badge tsd-badge--open">Maker</span></td><td>Perusahaan A, B</td><td><span class="tsd-badge tsd-badge--posted"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Aktif</span></td></tr>
+        <tr><td><label class="tsd-check-input"><input type="checkbox" aria-label="Pilih Auditor"></label></td><td><div class="tsd-row" style="gap:var(--space-2)"><span class="tsd-avatar tsd-avatar--sm" aria-hidden="true">AU</span>Auditor Contoh</div></td><td><span class="tsd-badge tsd-badge--closed">Auditor</span></td><td>Semua</td><td><span class="tsd-stale">Nonaktif</span></td></tr>
+      </tbody></table></div>
+    <div class="tsd-card tsd-col" style="gap:var(--space-3)">
+      <div style="font:600 15px/22px var(--font-sans)">Checker Contoh</div>
+      <div class="tsd-banner tsd-banner--danger" role="alert" style="padding:var(--space-3)"><svg class="tsd-ico tsd-banner__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 18h.01"/></svg><div><div class="tsd-banner__title" style="font-size:13px">Pemisahan tugas</div><div class="tsd-banner__body">Memegang Maker dan Checker. Maker tidak boleh menyetujui pekerjaannya sendiri; periksa akses rekening.</div></div></div>
+      <dl class="tsd-meta-grid" style="padding:0"><dt>Role</dt><dd>Checker, Maker</dd><dt>Company</dt><dd>Perusahaan A, B</dd><dt>Login terakhir</dt><dd class="tsd-num">17 Nov 2026, 08:55</dd></dl>
+      <div class="tsd-row"><button class="tsd-btn tsd-btn--secondary tsd-btn--sm">Ubah akses</button><button class="tsd-btn tsd-btn--ghost tsd-btn--sm">Nonaktifkan</button></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<!-- @dsCard group="Pages" height=760 width=980 subtitle="Template parser per bank, mapping kolom, pratinjau parsing" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col tsd-app--stack" style="gap:var(--space-4)">
+  <div class="tsd-row" style="justify-content:space-between"><div><h1 class="tsd-dialog__title" style="font-size:22px;line-height:30px">Template Bank 1</h1><div class="tsd-meta">Versi 3 · diubah 12 Nov 2026 · import lama tetap memakai versinya</div></div><div class="tsd-row"><span class="tsd-badge tsd-badge--posted"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Aktif</span><button class="tsd-btn tsd-btn--secondary tsd-btn--sm">Buat versi baru</button></div></div>
+
+  <section class="tsd-card" aria-labelledby="f">
+    <div id="f" style="font:600 15px/22px var(--font-sans);margin-bottom:var(--space-3)">Aturan format</div>
+    <div class="tsd-row" style="align-items:flex-end">
+      <div class="tsd-field" style="width:160px"><label for="d">Format tanggal</label><select id="d" class="tsd-select"><option>DD/MM/YYYY</option></select></div>
+      <div class="tsd-field" style="width:140px"><label for="dec">Desimal</label><select id="dec" class="tsd-select"><option>Koma (,)</option></select></div>
+      <div class="tsd-field" style="width:140px"><label for="th">Ribuan</label><select id="th" class="tsd-select"><option>Titik (.)</option></select></div>
+      <div class="tsd-field" style="width:240px"><label for="m">Debit dan credit</label><select id="m" class="tsd-select"><option>Dua kolom terpisah</option></select></div>
+      <div class="tsd-field" style="width:140px"><label for="h">Baris header dilewati</label><input id="h" class="tsd-input" value="3" /></div>
+    </div>
+  </section>
+
+  <section class="tsd-card" style="padding:0;overflow:hidden" aria-labelledby="mp">
+    <div id="mp" style="font:600 15px/22px var(--font-sans);padding:var(--space-4) var(--space-4) var(--space-2)">Mapping kolom</div>
+    <table class="tsd-table">
+      <thead><tr><th scope="col">Kolom di file</th><th scope="col">Field kanonik</th><th scope="col">Wajib</th></tr></thead>
+      <tbody>
+        <tr><td>Tgl Transaksi</td><td class="tsd-ref">transactionDate</td><td>wajib</td></tr>
+        <tr><td>Tgl Valuta</td><td class="tsd-ref">valueDate</td><td>opsional</td></tr>
+        <tr><td>Keterangan</td><td class="tsd-ref">description</td><td>wajib</td></tr>
+        <tr><td>No. Referensi</td><td class="tsd-ref">referenceNumber</td><td>opsional</td></tr>
+        <tr><td>Debet</td><td class="tsd-ref">debitAmount</td><td>wajib</td></tr>
+        <tr><td>Kredit</td><td class="tsd-ref">creditAmount</td><td>wajib</td></tr>
+        <tr><td>Saldo</td><td class="tsd-ref">runningBalance</td><td>opsional</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="tsd-card" style="padding:0;overflow:hidden" aria-labelledby="pv">
+    <div id="pv" style="font:600 15px/22px var(--font-sans);padding:var(--space-4) var(--space-4) var(--space-2)">Pratinjau parsing <span class="tsd-meta">· 2 baris contoh</span></div>
+    <table class="tsd-table tsd-num">
+      <thead><tr><th scope="col">Sumber</th><th scope="col">transactionDate</th><th scope="col" class="r">debitAmount</th><th scope="col" class="r">creditAmount</th><th scope="col">Hasil</th></tr></thead>
+      <tbody>
+        <tr><td class="tsd-ref">17/11/2026 · 15.000.000,00 · 0,00</td><td>2026-11-17</td><td class="r">15000000.00</td><td class="r">0.00</td><td><span class="tsd-badge tsd-badge--posted"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Valid</span></td></tr>
+        <tr><td class="tsd-ref">31/13/2026 · 0,00 · 25.000.000,00</td><td>—</td><td class="r">0.00</td><td class="r">25000000.00</td><td><span class="tsd-badge tsd-badge--failed"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Tanggal tidak valid</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="tsd-row" style="justify-content:flex-end"><span class="tsd-meta">Aktivasi dinonaktifkan selama pratinjau masih memuat error.</span><button class="tsd-btn tsd-btn--secondary">Simpan Draft</button><button class="tsd-btn tsd-btn--primary" disabled>Aktifkan Versi</button></div>
+</div>
