@@ -1,0 +1,28 @@
+<!-- @dsCard group="Feedback" height=470 subtitle="Konfirmasi Post dan Reject dengan alasan wajib" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col" style="gap:var(--space-4)">
+  <div class="tsd-scrim">
+    <div class="tsd-dialog" role="dialog" aria-modal="true" aria-labelledby="d1">
+      <h2 class="tsd-dialog__title" id="d1">Post statement?</h2>
+      <dl class="tsd-eq" style="margin:0">
+        <dt>Rekening</dt><dd>Perusahaan A · Bank 1 · •••• 4417</dd>
+        <dt>Periode</dt><dd>1–17 Nov 2026</dd>
+        <dt>Jumlah transaksi</dt><dd>214</dd>
+        <dt>Closing balance</dt><dd>IDR 110.000.000,00</dd>
+      </dl>
+      <div class="tsd-banner" style="background:var(--warning-subtle)"><svg class="tsd-ico tsd-banner__icon" style="color:var(--warning-text)" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 18h.01"/></svg><div class="tsd-banner__body" style="margin:0;color:var(--text)">Setelah diposting, statement tidak dapat diubah atau dihapus. Koreksi hanya lewat Reverse atau Adjust.</div></div>
+      <div class="tsd-dialog__actions"><button class="tsd-btn tsd-btn--secondary">Batal</button><button class="tsd-btn tsd-btn--primary">Post Statement</button></div>
+    </div>
+  </div>
+  <div class="tsd-scrim">
+    <div class="tsd-dialog" role="dialog" aria-modal="true" aria-labelledby="d2">
+      <h2 class="tsd-dialog__title" id="d2">Reject statement?</h2>
+      <div class="tsd-field" style="width:auto">
+        <label for="reason">Alasan penolakan (wajib)</label>
+        <textarea id="reason" class="tsd-input" style="height:72px;padding:var(--space-2) var(--space-3)" aria-describedby="rh"></textarea>
+        <span id="rh" class="tsd-help">Alasan terlihat oleh Maker dan tercatat di audit trail. Saldo rekening tidak berubah.</span>
+      </div>
+      <div class="tsd-dialog__actions"><button class="tsd-btn tsd-btn--secondary">Batal</button><button class="tsd-btn tsd-btn--danger">Reject Statement</button></div>
+    </div>
+  </div>
+</div>

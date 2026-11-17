@@ -1,0 +1,19 @@
+<!-- @dsCard group="Forms" height=140 subtitle="Normal, error, nonaktif" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-row" style="align-items:flex-start;gap:var(--space-6)">
+  <div class="tsd-field">
+    <label for="f1">Subjek (wajib)</label>
+    <input id="f1" class="tsd-input" value="Selisih saldo rekening operasional" />
+    <span class="tsd-help">Ringkas dan spesifik. Maksimal 120 karakter.</span>
+  </div>
+  <div class="tsd-field">
+    <label for="f2">Tanggal statement (wajib)</label>
+    <input id="f2" class="tsd-input" value="31/13/2026" aria-invalid="true" aria-describedby="e2" />
+    <span id="e2" class="tsd-error"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 18h.01"/></svg>Format tanggal tidak valid. Gunakan DD/MM/YYYY.</span>
+  </div>
+  <div class="tsd-field">
+    <label for="f3">Rekening</label>
+    <input id="f3" class="tsd-input" value="•••• 4417" disabled aria-describedby="h3" />
+    <span id="h3" class="tsd-help">Tidak dapat diubah setelah statement diposting.</span>
+  </div>
+</div>

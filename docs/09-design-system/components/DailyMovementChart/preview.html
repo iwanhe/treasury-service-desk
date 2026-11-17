@@ -1,0 +1,79 @@
+<!-- @dsCard group="Dashboard" height=380 width=700 subtitle="Credit dan debit harian, tooltip, tampilan tabel" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-card" style="width:664px">
+  <div class="tsd-row" style="justify-content:space-between;margin-bottom:var(--space-2)">
+    <div><div style="font:600 15px/22px var(--font-sans)">Pergerakan kas harian (juta IDR)</div><div class="tsd-meta">11–17 Nov 2026 · contoh data</div></div>
+    <button class="tsd-btn tsd-btn--ghost tsd-btn--sm" id="tg" aria-pressed="false">Lihat sebagai tabel</button>
+  </div>
+  <div class="tsd-legend"><span><i style="background:var(--chart-credit)"></i>Credit</span><span><i style="background:var(--chart-debit)"></i>Debit</span></div>
+  <div class="tsd-chart" id="ch">
+    <svg id="svg" viewBox="0 0 640 240" role="img" aria-label="Grafik batang credit dan debit harian, 11 sampai 17 November 2026"></svg>
+    <div class="tsd-tip" id="tip" role="status"></div>
+  </div>
+  <table class="tsd-table tsd-num" id="tb" hidden>
+    <thead><tr><th scope="col">Tanggal</th><th scope="col" class="r">Credit</th><th scope="col" class="r">Debit</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+<script>
+(function () {
+  var days = ['11 Nov', '12 Nov', '13 Nov', '14 Nov', '15 Nov', '16 Nov', '17 Nov'];
+  var credit = [32, 18, 41, 25, 36, 12, 25];
+  var debit = [20, 27, 15, 33, 22, 9, 15];
+  var NS = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('svg'), tip = document.getElementById('tip'), ch = document.getElementById('ch');
+  var L = 40, R = 8, T = 16, B = 28, W = 640, H = 240, max = 50;
+  var iw = W - L - R, ih = H - T - B, band = iw / days.length, bw = 20, gap = 2;
+  function el(n, a, t) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (t != null) e.textContent = t; svg.appendChild(e); return e; }
+  function y(v) { return T + ih - (v / max) * ih; }
+  function fmt(v) { return v.toLocaleString('id-ID', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  for (var g = 0; g <= max; g += 10) {
+    el('line', { x1: L, x2: W - R, y1: y(g), y2: y(g), 'class': 'grid' });
+    el('text', { x: L - 8, y: y(g) + 4, 'text-anchor': 'end', 'class': 'axis' }, String(g));
+  }
+  function bar(x, v, cls) {
+    var h = (v / max) * ih, r = Math.min(4, h), top = y(v);
+    var d = 'M' + x + ',' + (top + ih - (top - T) - 0) ; // placeholder replaced below
+    d = 'M' + x + ',' + (T + ih) + 'V' + (top + r) + 'Q' + x + ',' + top + ' ' + (x + r) + ',' + top + 'H' + (x + bw - r) + 'Q' + (x + bw) + ',' + top + ' ' + (x + bw) + ',' + (top + r) + 'V' + (T + ih) + 'Z';
+    el('path', { d: d, 'class': cls });
+  }
+  var maxI = credit.indexOf(Math.max.apply(null, credit));
+  days.forEach(function (dn, i) {
+    var cx = L + band * i + band / 2;
+    bar(cx - bw - gap / 2, credit[i], 'c1');
+    bar(cx + gap / 2, debit[i], 'c2');
+    el('text', { x: cx, y: H - 8, 'text-anchor': 'middle', 'class': 'axis' }, dn);
+    if (i === maxI) el('text', { x: cx - bw / 2 - gap / 2, y: y(credit[i]) - 6, 'text-anchor': 'middle', 'class': 'lbl' }, String(credit[i]));
+    var hit = el('rect', { x: L + band * i, y: T, width: band, height: ih, 'class': 'hit', tabindex: 0, 'aria-label': dn + ': credit ' + credit[i] + ' juta, debit ' + debit[i] + ' juta' });
+    function show() {
+      tip.textContent = '';
+      var h = document.createElement('div'); h.textContent = dn + ' 2026'; tip.appendChild(h);
+      [['Credit', credit[i], 'var(--chart-credit)'], ['Debit', debit[i], 'var(--chart-debit)']].forEach(function (s) {
+        var r = document.createElement('div'); r.className = 'row';
+        var k = document.createElement('span'); k.className = 'key'; k.style.background = s[2];
+        var n = document.createElement('span'); n.textContent = s[0];
+        var v = document.createElement('span'); v.className = 'v'; v.textContent = fmt(s[1] * 1000000);
+        r.appendChild(k); r.appendChild(n); r.appendChild(v); tip.appendChild(r);
+      });
+      var scale = ch.clientWidth / W;
+      var left = (L + band * i + band / 2) * scale + 12;
+      if (left + 200 > ch.clientWidth) left = (L + band * i) * scale - 200;
+      tip.style.left = Math.max(0, left) + 'px'; tip.style.top = '8px'; tip.classList.add('on');
+    }
+    function hide() { tip.classList.remove('on'); }
+    hit.addEventListener('pointerenter', show); hit.addEventListener('pointermove', show); hit.addEventListener('pointerleave', hide);
+    hit.addEventListener('focus', show); hit.addEventListener('blur', hide);
+  });
+  var tb = document.getElementById('tb'), body = tb.querySelector('tbody');
+  days.forEach(function (dn, i) {
+    var tr = document.createElement('tr');
+    [[dn + ' 2026', ''], [fmt(credit[i] * 1000000), 'r'], [fmt(debit[i] * 1000000), 'r']].forEach(function (c) { var td = document.createElement('td'); td.textContent = c[0]; if (c[1]) td.className = c[1]; tr.appendChild(td); });
+    body.appendChild(tr);
+  });
+  var tg = document.getElementById('tg');
+  tg.addEventListener('click', function () {
+    var on = tb.hidden; tb.hidden = !on; ch.hidden = on; tg.setAttribute('aria-pressed', String(on));
+    tg.textContent = on ? 'Lihat sebagai grafik' : 'Lihat sebagai tabel';
+  });
+})();
+</script>

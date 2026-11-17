@@ -1,0 +1,118 @@
+/* Treasury Service Desk — generated from tokens.json. Do not edit by hand. */
+:root, [data-theme="light"] {
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-subtle: #F9FAFB;
+  --border: #E4E7EC;
+  --border-strong: #667085;
+  --text: #101828;
+  --text-muted: #475467;
+  --text-on-solid: #FFFFFF;
+  --primary: #2F6FED;
+  --primary-hover: #2459CF;
+  --primary-subtle: #EEF4FF;
+  --primary-text: #1F5AD6;
+  --focus-ring: #2F6FED;
+  --success: #12B76A;
+  --success-text: #067647;
+  --success-subtle: #ECFDF3;
+  --warning: #F79009;
+  --warning-text: #B54708;
+  --warning-subtle: #FFFAEB;
+  --danger: #F04438;
+  --danger-text: #B42318;
+  --danger-subtle: #FEF3F2;
+  --danger-solid: #B42318;
+  --status-open: var(--primary-text);
+  --status-open-bg: var(--primary-subtle);
+  --status-pending: var(--warning-text);
+  --status-pending-bg: var(--warning-subtle);
+  --status-resolved: var(--success-text);
+  --status-resolved-bg: var(--success-subtle);
+  --status-closed: var(--text-muted);
+  --status-closed-bg: var(--surface-subtle);
+  --priority-urgent: var(--danger-text);
+  --priority-urgent-bg: var(--danger-subtle);
+  --sla-warning: #C4320A;
+  --sla-warning-bg: #FFF6ED;
+  --sla-breach: var(--danger-text);
+  --sla-breach-bg: var(--danger-subtle);
+  --fin-credit: var(--success-text);
+  --fin-debit: var(--danger-text);
+  --reconciled: #0E7090;
+  --reconciled-bg: #ECFDFF;
+  --approval: #5925DC;
+  --approval-bg: #F4F3FF;
+  --chart-credit: #2F6FED;
+  --chart-debit: #E8710A;
+  --stale: var(--text-muted);
+  --stale-bg: var(--surface-subtle);
+  --elevation-1: 0 1px 2px rgba(16,24,40,0.06);
+  --elevation-2: 0 4px 12px rgba(16,24,40,0.10);
+}
+[data-theme="dark"] {
+  --bg: #0C111D;
+  --surface: #161B26;
+  --surface-subtle: #1F242F;
+  --border: #333741;
+  --border-strong: #85888E;
+  --text: #F5F5F6;
+  --text-muted: #A3A6AB;
+  --text-on-solid: #FFFFFF;
+  --primary: #2F6FED;
+  --primary-hover: #2459CF;
+  --primary-subtle: #1B2A4A;
+  --primary-text: #84ADFF;
+  --focus-ring: #84ADFF;
+  --success: #47CD89;
+  --success-text: #75E0A7;
+  --success-subtle: #0B2E1F;
+  --warning: #FDB022;
+  --warning-text: #FEC84B;
+  --warning-subtle: #3B2A0A;
+  --danger: #F97066;
+  --danger-text: #FDA29B;
+  --danger-subtle: #3B1512;
+  --danger-solid: #D92D20;
+  --sla-warning: #FD853A;
+  --sla-warning-bg: #3A1D0B;
+  --reconciled: #67E3F9;
+  --reconciled-bg: #0B2A33;
+  --approval: #B692F6;
+  --approval-bg: #1E1650;
+  --chart-credit: #5B8DEF;
+  --chart-debit: #E06A0B;
+  --elevation-1: 0 1px 2px rgba(0,0,0,0.40);
+  --elevation-2: 0 4px 12px rgba(0,0,0,0.50);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --row-compact: 44px;
+  --row-comfortable: 56px;
+  --layout-nav: 220px;
+  --layout-list: 400px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-full: 999px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+.tsd-type-display { font-family: var(--font-sans); font-size: 28px; line-height: 36px; font-weight: 600; }
+.tsd-type-h1 { font-family: var(--font-sans); font-size: 22px; line-height: 30px; font-weight: 600; }
+.tsd-type-h2 { font-family: var(--font-sans); font-size: 18px; line-height: 26px; font-weight: 600; }
+.tsd-type-h3 { font-family: var(--font-sans); font-size: 15px; line-height: 22px; font-weight: 600; }
+.tsd-type-body { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 400; }
+.tsd-type-body-sm { font-family: var(--font-sans); font-size: 13px; line-height: 18px; font-weight: 400; }
+.tsd-type-label { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; }
+.tsd-type-caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 400; }
+.tsd-type-amount-xl { font-family: var(--font-sans); font-size: 28px; line-height: 34px; font-weight: 600; }
+.tsd-type-amount { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 500; }
+.tsd-type-reference { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 400; }
