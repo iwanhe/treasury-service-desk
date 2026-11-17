@@ -1,0 +1,39 @@
+<!-- @dsCard group="Pages" height=980 width=980 subtitle="Pilih rekening, upload, preview mapping, ringkasan validasi" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col tsd-app--stack" style="gap:var(--space-4)">
+  <div class="tsd-row" style="justify-content:space-between"><h1 class="tsd-dialog__title" style="font-size:22px;line-height:30px">Upload Statement</h1><div class="tsd-steps"><b>1 Rekening</b> › <b>2 File</b> › 3 Preview › 4 Validasi</div></div>
+
+  <section class="tsd-card" aria-labelledby="s1">
+    <div id="s1" style="font:600 15px/22px var(--font-sans);margin-bottom:var(--space-3)">1. Rekening</div>
+    <div class="tsd-row" style="align-items:flex-end">
+      <div class="tsd-field" style="width:240px"><label for="c">Company</label><select id="c" class="tsd-select"><option>Perusahaan A</option></select></div>
+      <div class="tsd-field" style="width:200px"><label for="b">Bank</label><select id="b" class="tsd-select"><option>Bank 1</option></select></div>
+      <div class="tsd-field" style="width:260px"><label for="a">Rekening</label><select id="a" class="tsd-select"><option>•••• 4417 · IDR · Current</option></select></div>
+    </div>
+  </section>
+
+  <section class="tsd-card" aria-labelledby="s2">
+    <div id="s2" style="font:600 15px/22px var(--font-sans);margin-bottom:var(--space-3)">2. File statement</div>
+    <div class="tsd-file"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg><div style="flex:1"><div style="font-weight:500">mutasi-rekening-nov-2026.xlsx</div><div class="tsd-meta tsd-num">214 KB · periode 1–17 Nov 2026 · SHA-256 a3f9…c21e</div></div><span class="tsd-badge tsd-badge--posted"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Lolos validasi file</span><button class="tsd-btn tsd-btn--ghost tsd-btn--sm">Ganti</button></div>
+  </section>
+
+  <section class="tsd-card" style="padding:0;overflow:hidden" aria-labelledby="s3">
+    <div id="s3" style="font:600 15px/22px var(--font-sans);padding:var(--space-4) var(--space-4) var(--space-2)">3. Preview dan mapping <span class="tsd-meta">· Template Bank 1 v3</span></div>
+    <table class="tsd-table tsd-num">
+      <thead><tr><th scope="col">Tanggal</th><th scope="col">Deskripsi</th><th scope="col">Reference</th><th scope="col" class="r">Debit</th><th scope="col" class="r">Credit</th><th scope="col" class="r">Running balance</th></tr></thead>
+      <tbody>
+        <tr><td>17 Nov 2026</td><td>PAYMENT VENDOR ABC</td><td class="tsd-ref">TRX123456</td><td class="r" style="color:var(--fin-debit)">15.000.000,00</td><td class="r">—</td><td class="r">485.000.000,00</td></tr>
+        <tr><td>17 Nov 2026</td><td>TRANSFER MASUK</td><td class="tsd-ref">TRX123457</td><td class="r">—</td><td class="r" style="color:var(--fin-credit)">25.000.000,00</td><td class="r">510.000.000,00</td></tr>
+      </tbody>
+    </table>
+    <div class="tsd-meta" style="padding:var(--space-2) var(--space-4)">Menampilkan 2 dari 214 baris</div>
+  </section>
+
+  <section class="tsd-card" aria-labelledby="s4">
+    <div id="s4" style="font:600 15px/22px var(--font-sans);margin-bottom:var(--space-2)">4. Hasil validasi</div>
+    <div class="tsd-check"><svg class="tsd-ico tsd-check__ico--ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><div style="font-weight:500">Tidak ada duplikat</div><div class="tsd-meta">Checksum belum pernah diimpor untuk rekening ini</div></div></div>
+    <div class="tsd-check"><svg class="tsd-ico tsd-check__ico--warn" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4M12 18h.01"/></svg><div><div style="font-weight:500">2 baris tanpa reference</div><div class="tsd-meta">Peringatan, tidak menghalangi pengajuan</div></div></div>
+    <div class="tsd-check"><svg class="tsd-ico tsd-check__ico--ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><div style="font-weight:500">Closing balance cocok</div><dl class="tsd-eq"><dt>Opening + Credit − Debit</dt><dd>IDR 509.975.000,00</dd><dt>Closing di statement</dt><dd>IDR 509.975.000,00</dd></dl></div></div>
+    <div class="tsd-row" style="justify-content:flex-end;margin-top:var(--space-3)"><span class="tsd-meta">Saldo rekening baru berubah setelah statement diposting.</span><button class="tsd-btn tsd-btn--secondary">Simpan Draft</button><button class="tsd-btn tsd-btn--primary">Submit for Approval</button></div>
+  </section>
+</div>

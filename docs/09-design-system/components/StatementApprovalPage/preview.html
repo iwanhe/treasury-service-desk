@@ -1,0 +1,31 @@
+<!-- @dsCard group="Pages" height=760 width=980 subtitle="Banner, ringkasan, transaksi, timeline, aksi" -->
+<link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<div class="tsd-col tsd-app--stack" style="gap:var(--space-4)">
+  <div class="tsd-row" style="justify-content:space-between"><div><h1 class="tsd-dialog__title" style="font-size:22px;line-height:30px">Statement 1–17 Nov 2026</h1><div class="tsd-meta">Perusahaan A · Bank 1 · •••• 4417 · IDR</div></div><span class="tsd-badge tsd-badge--approval"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Pending Approval</span></div>
+  <div class="tsd-banner" role="status"><svg class="tsd-ico tsd-banner__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><div><div class="tsd-banner__title">Menunggu Checker</div><div class="tsd-banner__body">Anda yang meng-upload statement ini, jadi Checker lain harus menyetujui.</div></div></div>
+  <div class="tsd-two">
+    <div class="tsd-col" style="gap:var(--space-4)">
+      <div class="tsd-card"><dl class="tsd-eq" style="margin:0;grid-template-columns:auto auto auto auto">
+        <dt>Opening</dt><dd>IDR 500.000.000,00</dd><dt>Jumlah transaksi</dt><dd>214</dd>
+        <dt>Total credit</dt><dd style="color:var(--fin-credit)">+ IDR 25.000.000,00</dd><dt>Total debit</dt><dd style="color:var(--fin-debit)">− IDR 15.025.000,00</dd>
+        <dt>Closing</dt><dd style="font-weight:600">IDR 509.975.000,00</dd><dt>Rumus</dt><dd><span class="tsd-badge tsd-badge--posted"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Cocok</span></dd>
+      </dl></div>
+      <div class="tsd-card" style="padding:0;overflow:hidden"><table class="tsd-table tsd-num">
+        <thead><tr><th scope="col">Tanggal</th><th scope="col">Deskripsi</th><th scope="col" class="r">Debit</th><th scope="col" class="r">Credit</th></tr></thead>
+        <tbody>
+          <tr><td>17 Nov 2026</td><td>PAYMENT VENDOR ABC</td><td class="r" style="color:var(--fin-debit)">15.000.000,00</td><td class="r">—</td></tr>
+          <tr><td>17 Nov 2026</td><td>TRANSFER MASUK</td><td class="r">—</td><td class="r" style="color:var(--fin-credit)">25.000.000,00</td></tr>
+          <tr><td>17 Nov 2026</td><td>BIAYA ADMINISTRASI</td><td class="r" style="color:var(--fin-debit)">25.000,00</td><td class="r">—</td></tr>
+        </tbody></table></div>
+    </div>
+    <div class="tsd-col" style="gap:var(--space-4)">
+      <div class="tsd-card"><div style="font:600 15px/22px var(--font-sans);margin-bottom:var(--space-3)">Alur</div>
+        <ol class="tsd-tl">
+          <li class="tsd-tl__item tsd-tl__item--done"><span class="tsd-tl__dot"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><div><div class="tsd-tl__title">Diajukan</div><div class="tsd-tl__sub tsd-num">Maker · 09:10</div></div></li>
+          <li class="tsd-tl__item tsd-tl__item--current"><span class="tsd-tl__dot"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><div><div class="tsd-tl__title">Menunggu Checker</div></div></li>
+          <li class="tsd-tl__item"><span class="tsd-tl__dot"><svg class="tsd-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg></span><div><div class="tsd-tl__title">Posted</div></div></li>
+        </ol></div>
+      <div class="tsd-card tsd-col"><button class="tsd-btn tsd-btn--primary" disabled aria-describedby="w">Approve</button><span id="w" class="tsd-meta">Hanya Checker lain yang dapat menyetujui.</span></div>
+    </div>
+  </div>
+</div>
